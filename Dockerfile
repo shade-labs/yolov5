@@ -4,6 +4,8 @@ FROM nvidia/cuda:11.3.1-devel-ubuntu20.04
 RUN rm -f /etc/apt/sources.list.d/*.list
 
 # ros2 install
+ENV ROS_DISTRO foxy
+
 RUN echo 'Etc/UTC' > /etc/timezone && \
     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime
 
@@ -12,8 +14,6 @@ RUN echo "deb http://packages.ros.org/ros2/ubuntu focal main" > /etc/apt/sources
 
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
-
-ENV ROS_DISTRO foxy
 
 RUN apt update && \
     apt install -y --no-install-recommends \
@@ -50,4 +50,7 @@ COPY yolov5_ros2 /app/shade_ws/src/yolov5_ros2
 WORKDIR /app/shade_ws
 RUN colcon build
 
-ENTRYPOINT ["/bin/bash", "-c", "source /opt/ros/foxy/setup.bash && source ./install/setup.bash && ros2 run yolov5_ros2 interface"]
+CMD["/bin/bash", "-c", "source /opt/ros/${ROS_DISTRO}/setup.sh", "source ./install/setup.sh"]
+
+# uncomment this line to begin the node on startup within the container
+#ENTRYPOINT ["/bin/bash", "-c", "source /opt/ros/foxy/setup.bash && source ./install/setup.bash && ros2 run yolov5_ros2 interface"]
