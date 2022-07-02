@@ -1,10 +1,15 @@
+# set enviromental variables
+#ARG ROS_DISTRO
+#ENV ROS_DISTRO ${ROS_DISTRO}
+#
+#ARG CUDA_VERSIONS
+#FROM nvidia/cuda:${CUDA_VERSION}
+
 FROM nvidia/cuda:11.3.1-devel-ubuntu20.04
+ENV ROS_DISTRO foxy
 
 # avoids nvidia's expiring keys
 RUN rm -f /etc/apt/sources.list.d/*.list
-
-# ros2 install
-ENV ROS_DISTRO foxy
 
 RUN echo 'Etc/UTC' > /etc/timezone && \
     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime
@@ -50,7 +55,5 @@ COPY yolov5_ros2 /app/shade_ws/src/yolov5_ros2
 WORKDIR /app/shade_ws
 RUN colcon build
 
-CMD["/bin/bash", "-c", "source /opt/ros/${ROS_DISTRO}/setup.sh", "source ./install/setup.sh"]
-
-# uncomment this line to begin the node on startup within the container
-#ENTRYPOINT ["/bin/bash", "-c", "source /opt/ros/foxy/setup.bash && source ./install/setup.bash && ros2 run yolov5_ros2 interface"]
+#CMD ["/bin/bash", "-c", "source /opt/ros/${ROS_DISTRO}/setup.sh", "source ./install/setup.sh"]
+ENTRYPOINT ["/bin/bash", "-c", "source /opt/ros/foxy/setup.bash && source ./install/setup.bash && ros2 run yolov5_ros2 interface"]
