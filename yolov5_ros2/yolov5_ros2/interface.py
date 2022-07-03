@@ -34,6 +34,8 @@ class ImageSubscriber(Node):
         open("data.pt", "wb").write(response.content)
         self.model = torch.hub.load('ultralytics/yolov5', 'custom', path='./data.pt')
 
+        self.get_logger().info("YOLOv5 Initialized")
+
     def inference(self, image: Image):
         return self.model(image)
 

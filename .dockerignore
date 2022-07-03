@@ -3,3 +3,7 @@ build/*
 log/*
 install/*
 demo/*
+cloudbuild.yaml
+build_and_push.sh
+.gitignore
+README.md

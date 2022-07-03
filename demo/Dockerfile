@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.3.1-devel-ubuntu20.04
+FROM nvidia/cuda:11.7.0-devel-ubuntu20.04
 
 # avoids nvidia's expiring keys
 RUN rm -f /etc/apt/sources.list.d/*.list
@@ -38,8 +38,8 @@ RUN apt update && \
 
 # yolov5 install
 WORKDIR /app
-RUN python3 -m pip install -qr https://raw.githubusercontent.com/ultralytics/yolov5/master/requirements.txt && \
-    python3 -m pip install pandas==1.1.4 seaborn==0.11.0
+RUN python3 -m pip install --upgrade pip && \
+    python3 -m pip install -qr https://raw.githubusercontent.com/ultralytics/yolov5/master/requirements.txt
 
 # This is in a different folder, just to show running the workspace
 RUN ["/bin/bash", "-c", "mkdir -p /app/shade_ws/src"]
@@ -54,7 +54,7 @@ RUN apt update && \
       python3-natsort && \
     rm -rf /var/lib/apt/lists/*
 
-COPY ../yolov5_ros2 /app/shade_ws/src/yolov5_ros2
+COPY ./yolov5_ros2 /app/shade_ws/src/yolov5_ros2
 
 # build
 WORKDIR /app/shade_ws
@@ -66,8 +66,7 @@ RUN echo '#!/bin/bash' >> run.sh && \
     echo 'ros2 run camera_simulator camera_simulator --type video --path /app/shade_ws/src/video.mp4 --loop &' >> run.sh && \
     echo 'source /opt/ros/${ROS_DISTRO}/setup.sh' >> run.sh && \
     echo 'source ./install/setup.bash' >> run.sh && \
-    echo 'ros2 run yolov5_ros2 interface --ros-args -r /yolov5/image_raw:=/image/image_raw &' >> run.sh && \
-    echo 'bash' >> run.sh && \
+    echo 'ros2 run yolov5_ros2 interface --ros-args -r /yolov5/image_raw:=/image/image_raw &' >> run.sh
     chmod +x run.sh
 
 CMD ["./run.sh"]

@@ -1,27 +1,29 @@
-# set enviromental variables
-#ARG ROS_DISTRO
-#ENV ROS_DISTRO ${ROS_DISTRO}
-#
-#ARG CUDA_VERSIONS
-#FROM nvidia/cuda:${CUDA_VERSION}
+ARG CUDA_VERSION
+FROM nvidia/cuda:${CUDA_VERSION}
 
-FROM nvidia/cuda:11.3.1-devel-ubuntu20.04
-ENV ROS_DISTRO foxy
+# set enviromental variables
+ARG ROS_DISTRO
+ENV ROS_DISTRO ${ROS_DISTRO}
+
+ARG UBUNTU_VERSION
+ENV UBUNTU_VERSION ${UBUNTU_VERSION}
 
 # avoids nvidia's expiring keys
 RUN rm -f /etc/apt/sources.list.d/*.list
 
-RUN echo 'Etc/UTC' > /etc/timezone && \
-    ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime
-
-RUN echo "deb http://packages.ros.org/ros2/ubuntu focal main" > /etc/apt/sources.list.d/ros2-latest.list && \
-    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-
+# ensure timezone
+ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
 
+RUN echo 'Etc/UTC' > /etc/timezone && \
+    ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime
+
+RUN echo "deb http://packages.ros.org/ros2/ubuntu ${UBUNTU_VERSION} main" > /etc/apt/sources.list.d/ros2-latest.list && \
+    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
+
 RUN apt update && \
-    apt install -y --no-install-recommends \
+    apt install -y \
       git \
       curl \
       python3-colcon-common-extensions \
@@ -32,7 +34,7 @@ RUN apt update && \
 
 # additional dependency requirements (cv2, cv_bridge, etc)
 RUN apt update && \
-    apt install -y --no-install-recommends \
+    apt install -y \
       ffmpeg \
       libsm6 \
       libxext6 \
@@ -43,8 +45,8 @@ RUN apt update && \
 
 # yolov5 install
 WORKDIR /app
-RUN python3 -m pip install -qr https://raw.githubusercontent.com/ultralytics/yolov5/master/requirements.txt && \
-    python3 -m pip install pandas==1.1.4 seaborn==0.11.0
+RUN python3 -m pip install --upgrade pip && \
+    python3 -m pip install -r https://raw.githubusercontent.com/ultralytics/yolov5/master/requirements.txt --ignore-installed PyYAML
 
 # inject wrapper
 RUN ["/bin/bash", "-c", "mkdir -p /app/shade_ws/src"]
@@ -54,6 +56,4 @@ COPY yolov5_ros2 /app/shade_ws/src/yolov5_ros2
 # build
 WORKDIR /app/shade_ws
 RUN colcon build
-
-#CMD ["/bin/bash", "-c", "source /opt/ros/${ROS_DISTRO}/setup.sh", "source ./install/setup.sh"]
-ENTRYPOINT ["/bin/bash", "-c", "source /opt/ros/foxy/setup.bash && source ./install/setup.bash && ros2 run yolov5_ros2 interface"]
+ENTRYPOINT ["/bin/bash", "-c", "source /opt/ros/${ROS_DISTRO}/setup.bash && source ./install/setup.bash && ros2 run yolov5_ros2 interface"]
