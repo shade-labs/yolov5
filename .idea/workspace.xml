@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1a236dc-4dad-4eee-87ce-cd2c9800ac5f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build_and_push.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+    <list default="true" id="a1a236dc-4dad-4eee-87ce-cd2c9800ac5f" name="Changes" comment="updated readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_and_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build_push.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/demo/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ros2/yolov5_ros2/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ros2/yolov5_ros2/interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolov5_ros2/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/package.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolov5_ros2/resource/yolov5_ros2" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/resource/yolov5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolov5_ros2/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/setup.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolov5_ros2/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolov5_ros2/test/test_copyright.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/test/test_copyright.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolov5_ros2/test/test_flake8.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/test/test_flake8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolov5_ros2/test/test_pep257.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/test/test_pep257.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolov5_ros2/yolov5_ros2/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/yolov5/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolov5_ros2/yolov5_ros2/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/yolov5/interface.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +60,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.Dockerfile">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="yolov5" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,9 +101,18 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="demo/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="demo/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Docker.demo/Dockerfile" />
         <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
@@ -113,6 +129,8 @@
       <workItem from="1656027130723" duration="1966000" />
       <workItem from="1656604377775" duration="1932000" />
       <workItem from="1656698641395" duration="6553000" />
+      <workItem from="1657223416010" duration="946000" />
+      <workItem from="1657224425457" duration="3962000" />
     </task>
     <task id="LOCAL-00001" summary="updated readme">
       <created>1656707069728</created>

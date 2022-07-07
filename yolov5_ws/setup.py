@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'yolov5_ros2'
+package_name = 'yolov5'
 
 setup(
     name=package_name,
@@ -21,7 +21,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'interface = yolov5_ros2.interface:main'
+            'interface = yolov5.interface:main'
         ],
     },
 )

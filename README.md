@@ -5,7 +5,7 @@ This is a ROS2 wrapper for the image detection package, [YOLOv5](https://github.
 # Installation Guide
 ## Using Docker Pull
 1. Install [Docker](https://www.docker.com/) and ensure the Docker daemon is running in the background.
-2. Run ```docker pull shaderobotics/yolov5-ros2:${ROS2_DISTRO}```
+2. Run ```docker pull shaderobotics/yolov5:${ROS2_DISTRO}```
 3. Follow the run commands in the usage section below
 
 ## Build Docker Image Natively

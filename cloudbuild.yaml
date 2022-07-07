@@ -5,11 +5,11 @@
    secretEnv: ['USERNAME', 'PASSWORD']
  - name: 'gcr.io/cloud-builders/docker'
    entrypoint: 'bash'
-   args: ['-c', 'docker build -t $$USERNAME/yolov5-ros2:${_ROS_DISTRO} . --build-arg ROS_DISTRO=${_ROS_DISTRO} --build-arg UBUNTU_VERSION=${_UBUNTU_VERSION} --build-arg CUDA_VERSION=${_CUDA_VERSION}']
+   args: ['-c', 'docker build -t $$USERNAME/yolov5:${_ROS_DISTRO} . --build-arg ROS_DISTRO=${_ROS_DISTRO} --build-arg CUDA_VERSION=${_CUDA_VERSION}']
    secretEnv: ['USERNAME']
  - name: 'gcr.io/cloud-builders/docker'
    entrypoint: 'bash'
-   args: ['-c', 'docker push $$USERNAME/yolov5-ros2:${_ROS_DISTRO}']
+   args: ['-c', 'docker push $$USERNAME/yolov5:${_ROS_DISTRO}']
    secretEnv: ['USERNAME']
  availableSecrets:
    secretManager:
