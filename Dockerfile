@@ -1,5 +1,8 @@
-ARG CUDA_VERSION=foxy-cudnn-runtime
+ARG CUDA_VERSION=humble-cuda
 FROM shaderobotics/ros:${CUDA_VERSION}
+
+ARG ROS_DISTRO=humble
+ENV ROS_DISTRO $ROS_DISTRO
 
 # additional dependency requirements (cv2, cv_bridge, etc)
 RUN apt update && \

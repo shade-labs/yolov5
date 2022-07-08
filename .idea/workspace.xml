@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1a236dc-4dad-4eee-87ce-cd2c9800ac5f" name="Changes" comment="updated readme">
+    <list default="true" id="a1a236dc-4dad-4eee-87ce-cd2c9800ac5f" name="Changes" comment="modified yolov5 to be shade registry compatable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build_and_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build_push.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/demo/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ros2/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/package.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ros2/resource/yolov5_ros2" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/resource/yolov5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ros2/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/setup.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ros2/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ros2/test/test_copyright.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/test/test_copyright.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ros2/test/test_flake8.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/test/test_flake8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ros2/test/test_pep257.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/test/test_pep257.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ros2/yolov5_ros2/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/yolov5/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ros2/yolov5_ros2/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/yolov5/interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build_push.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +118,8 @@
       <workItem from="1656604377775" duration="1932000" />
       <workItem from="1656698641395" duration="6553000" />
       <workItem from="1657223416010" duration="946000" />
-      <workItem from="1657224425457" duration="3962000" />
+      <workItem from="1657224425457" duration="4624000" />
+      <workItem from="1657305557899" duration="1675000" />
     </task>
     <task id="LOCAL-00001" summary="updated readme">
       <created>1656707069728</created>
@@ -139,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656707069728</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="modified yolov5 to be shade registry compatable">
+      <created>1657233969922</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657233969922</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +154,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated readme" />
+    <MESSAGE value="modified yolov5 to be shade registry compatable" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified yolov5 to be shade registry compatable" />
   </component>
 </project>
