@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1a236dc-4dad-4eee-87ce-cd2c9800ac5f" name="Changes" comment="modified yolov5 to be shade registry compatable">
+    <list default="true" id="a1a236dc-4dad-4eee-87ce-cd2c9800ac5f" name="Changes" comment="fixed small issue with current build">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build_push.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yolov5_ws/yolov5/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5_ws/yolov5/interface.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,7 @@
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
-          <option name="imageTag" value="test" />
+          <option name="imageTag" value="shaderobotics/bruh:test" />
           <option name="buildArgs">
             <list>
               <DockerEnvVarImpl>
@@ -97,6 +99,10 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Docker.demo/Dockerfile" />
+      <item itemvalue="Docker.Dockerfile" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.Dockerfile" />
@@ -119,7 +125,8 @@
       <workItem from="1656698641395" duration="6553000" />
       <workItem from="1657223416010" duration="946000" />
       <workItem from="1657224425457" duration="4624000" />
-      <workItem from="1657305557899" duration="1675000" />
+      <workItem from="1657305557899" duration="8227000" />
+      <workItem from="1657314750141" duration="4323000" />
     </task>
     <task id="LOCAL-00001" summary="updated readme">
       <created>1656707069728</created>
@@ -135,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657233969922</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed small issue with current build">
+      <created>1657307371401</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657307371401</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +169,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated readme" />
     <MESSAGE value="modified yolov5 to be shade registry compatable" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified yolov5 to be shade registry compatable" />
+    <MESSAGE value="fixed small issue with current build" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed small issue with current build" />
   </component>
 </project>

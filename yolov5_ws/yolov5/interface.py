@@ -2,6 +2,7 @@ import torch
 import requests
 import rclpy
 from rclpy.node import Node
+import cv2
 from cv_bridge import CvBridge
 from std_msgs.msg import String
 from sensor_msgs.msg import Image

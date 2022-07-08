@@ -1,5 +1,5 @@
-ARG CUDA_VERSION=humble-cuda
-FROM shaderobotics/ros:${CUDA_VERSION}
+ARG ROS_DISTRO=humble
+FROM shaderobotics/pytorch:${ROS_DISTRO}
 
 ARG ROS_DISTRO=humble
 ENV ROS_DISTRO $ROS_DISTRO
@@ -19,8 +19,9 @@ RUN apt update && \
 
 # yolov5 install
 WORKDIR /app
+
 RUN python3 -m pip install --upgrade pip && \
-    python3 -m pip install -r https://raw.githubusercontent.com/ultralytics/yolov5/master/requirements.txt --ignore-installed PyYAML
+    python3 -m pip install -r https://raw.githubusercontent.com/ultralytics/yolov5/master/requirements.txt
 
 # inject wrapper
 RUN ["/bin/bash", "-c", "mkdir -p /app/shade_ws/src"]
