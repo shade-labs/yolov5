@@ -17,7 +17,7 @@ RUN apt update && \
       ros-${ROS_DISTRO}-cv-bridge \
       ros-${ROS_DISTRO}-vision-msgs \
       ros-${ROS_DISTRO}-vision-opencv && \
-    rm -rf /var/lib/apt/lists/* &&  \
+    rm -rf /var/lib/apt/lists/* && \
     python3 -m pip install --upgrade pip && \
     python3 -m pip install -r https://raw.githubusercontent.com/ultralytics/yolov5/master/requirements.txt
 
