@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1a236dc-4dad-4eee-87ce-cd2c9800ac5f" name="Changes" comment="fixed spacing issue">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ws/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/package.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ws/resource/yolov5" beforeDir="false" afterPath="$PROJECT_DIR$/resource/yolov5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ws/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/setup.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ws/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ws/test/test_copyright.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_copyright.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ws/test/test_flake8.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_flake8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ws/test/test_pep257.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_pep257.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ws/yolov5/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5_ws/yolov5/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5/interface.py" afterDir="false" />
-    </list>
+    <list default="true" id="a1a236dc-4dad-4eee-87ce-cd2c9800ac5f" name="Changes" comment="fixed spacing issue" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,19 +38,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -148,6 +137,7 @@
       <workItem from="1657398208211" duration="13000" />
       <workItem from="1657398827296" duration="669000" />
       <workItem from="1657504552930" duration="48000" />
+      <workItem from="1657507439412" duration="60000" />
     </task>
     <task id="LOCAL-00001" summary="updated readme">
       <created>1656707069728</created>
@@ -209,6 +199,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="updated readme" />
     <MESSAGE value="modified yolov5 to be shade registry compatable" />
     <MESSAGE value="fixed small issue with current build" />
