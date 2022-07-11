@@ -10,8 +10,8 @@ This is a ROS2 wrapper for the image detection package, [YOLOv5](https://github.
 
 ## Build Docker Image Natively
 1. Install [Docker](https://www.docker.com/) and ensure the Docker daemon is running in the background.
-2. Clone this repo with ```git pull -b ${ROS2_DISTRO} https://github.com/open-shade/yolov5_ros2.git```
-3. Enter the repo with ```cd yolov5_ros2```
+2. Clone this repo with ```git pull -b ${ROS2_DISTRO} https://github.com/open-shade/yolov5.git```
+3. Enter the repo with ```cd yolov5```
 4. Build the container with ```docker build . -t [name]```. This will take a while.
 5. Follow the run commands in the usage section below.
 
