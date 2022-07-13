@@ -10,14 +10,15 @@ This is a ROS2 wrapper for the image detection package, [YOLOv5](https://github.
 
 ## Build Docker Image Natively
 1. Install [Docker](https://www.docker.com/) and ensure the Docker daemon is running in the background.
-2. Clone this repo with ```git pull -b ${ROS2_DISTRO} https://github.com/open-shade/yolov5_ros2.git```
+2. Clone this repo with ```git pull https://github.com/open-shade/yolov5_ros2.git```
 3. Enter the repo with ```cd yolov5_ros2```
-4. Build the container with ```docker build . -t [name]```. This will take a while.
-5. Follow the run commands in the usage section below.
+4. Enter the ```Dockerfile``` and change the default of ```ARG ROS_DISTRO=humble``` on line 1 and 4 to be equal to your desired distro. 
+5. Build the container with ```docker build . -t [name]```. This will take a while.
+6. Follow the run commands in the usage section below.
 
 # Usage
 ## Run the YOLOv5 Node 
-Run ```docker run -t [name]```. Your node should be running now. Then, by running ```ros2 topic list,``` you should see all the possible pub and sub routes.
+Run ```docker run --gpus all --net=host -t [name]```. Your node should be running now. Then, by running ```ros2 topic list,``` you should see all the possible pub and sub routes. Careful, the ```--gpus all``` flag will only function if you have a CUDA compatible graphics card with CUDA drivers installed and the [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-docker) installed as well. [Here](https://www.howtogeek.com/devops/how-to-use-an-nvidia-gpu-with-docker-containers/#:~:text=To%20use%20your%20GPU%20with,your%20containers%20for%20GPU%20support.&text=The%20Container%20Toolkit%20should%20now,to%20start%20a%20test%20container.) is a good guide to walk you through it if you need more assistance.
 
 For more details explaining how to run Docker images, visit the official Docker documentation [here](https://docs.docker.com/engine/reference/run/). Also, additional information as to how ROS2 communicates between external environment or multiple docker containers, visit the official ROS2 docs [here](https://docs.ros.org/en/foxy/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html#). 
 
