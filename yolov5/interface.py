@@ -15,7 +15,7 @@ class ImageSubscriber(Node):
         self.declare_parameter('pub_image', False)
         self.declare_parameter('pub_json', False)
         self.declare_parameter('pub_boxes', True)
-        self.declare_parameter('dataset_url', 'https://github.com/ultralytics/yolov5/releases/download/v6.1/yolov5m.pt')
+        self.declare_parameter('weights_url', 'https://github.com/ultralytics/yolov5/releases/download/v6.1/yolov5m.pt')
 
         self.subscription = self.create_subscription(
             Image,
@@ -31,7 +31,7 @@ class ImageSubscriber(Node):
         self.counter = 0
         self.br = CvBridge()
 
-        response = requests.get(self.get_parameter('dataset_url').value)
+        response = requests.get(self.get_parameter('weights_url').value)
         open("data.pt", "wb").write(response.content)
         self.model = torch.hub.load('ultralytics/yolov5', 'custom', path='./data.pt')
 

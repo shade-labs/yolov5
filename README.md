@@ -32,7 +32,7 @@ The supported, *optional* parameters are...
 | pub_image   | Boolean | False   | Enable or disable the pub of the processed image                    |
 | pub_json    | Boolean | False   | Enable or disable the pub of the data in stringified json           |
 | pub_boxes   | Boolean | True    | Enable or disable the pub of vision_msgs.msgs DetectionBoxesArray   | 
-| dataset_url | String  | [yolov5m](https://github.com/ultralytics/yolov5/releases/download/v6.1/yolov5m.pt) | Download URL for your YOLOv5 training set. Has to be in .pt format. |   
+| weights_url | String  | [yolov5m](https://github.com/ultralytics/yolov5/releases/download/v6.1/yolov5m.pt) | Download URL for your YOLOv5 training set. Has to be in .pt format. |   
 
 You __do not__ need to specify any parameters, unless you wish to modify the defaults.
 
