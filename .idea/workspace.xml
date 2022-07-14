@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="34d0c7b8-033c-469e-8ca4-17887d20534b" name="Changes" comment="fixed yolov5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yolov5/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/yolov5/interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/yolov5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/yolov5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudbuild.sh" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +35,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/opt/ros/humble/local/lib/python3.10/dist-packages",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PythonContentEntriesConfigurable"
   }
 }]]></component>
   <component name="RunManager">
@@ -74,6 +76,7 @@
       <updated>1657757121190</updated>
       <workItem from="1657757122369" duration="1274000" />
       <workItem from="1657758995280" duration="6942000" />
+      <workItem from="1657818862557" duration="6205000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
