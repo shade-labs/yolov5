@@ -6,7 +6,8 @@ import cv2
 from cv_bridge import CvBridge
 from std_msgs.msg import String
 from sensor_msgs.msg import Image
-from vision_msgs.msg import Detection2DArray, Detection2D, ObjectHypothesisWithPose, ObjectHypothesis
+from vision_msgs.msg import Detection2DArray, Detection2D, ObjectHypothesisWithPose, ObjectHypothesis, BoundingBox2D, Point2D, Pose2D
+from geometry_msgs.msg import PoseWithCovariance, Point
 
 class ImageSubscriber(Node):
     def __init__(self):
@@ -48,8 +49,6 @@ class ImageSubscriber(Node):
 
         for row in df.itertuples():
             self.get_logger().info(f"Detected {row.name}")
-            print(row)
-            print(row[5], row[6], row[7])
 
             detection = Detection2D()
 
@@ -59,18 +58,31 @@ class ImageSubscriber(Node):
             hypothesises = []
             hypothesis = ObjectHypothesisWithPose()
             hypothesis.hypothesis.class_id = str(row[6])
-            hypothesis.hypothesis.score(float(row[5]))
+            hypothesis.hypothesis.score = float(row[5])
+
+            pwc = PoseWithCovariance()
+            pwc.pose.position = Point()
+            pwc.pose.position.x = (int(row.xmin) + int(row.xmax)) / 2
+            pwc.pose.position.y = (int(row.ymin) + int(row.ymax)) / 2
+
+            hypothesis.pose = pwc
+
             hypothesises.append(hypothesis)
             detection.results = hypothesises
-            detection.results[0].pose.pose.position.x = (int(row.xmin) + int(row.xmax)) / 2
-            detection.results[0].pose.pose.position.y = (int(row.ymin) + int(row.ymax)) / 2
 
-            detection.bbox.center.x = (int(row.xmin) + int(row.xmax)) / 2
-            detection.bbox.center.y = (int(row.ymin) + int(row.ymax)) / 2
-            detection.bbox.center.theta = 0.0
+            bbox = BoundingBox2D()
+            bbox.size_x = (int(row.xmax) - int(row.xmin)) / 2
+            bbox.size_y = (int(row.ymax) - int(row.ymin)) / 2
 
-            detection.bbox.size_x = (int(row.xmax) - int(row.xmin)) / 2
-            detection.bbox.size_y = (int(row.ymax) - int(row.ymin)) / 2
+            point = Point2D()
+            point.x = (int(row.xmin) + int(row.xmax)) / 2
+            point.y = (int(row.ymin) + int(row.ymax)) / 2
+
+            center = Pose2D()
+            center.position = point
+            center.theta = 0.0
+
+            detection.bbox = bbox
 
             detections.append(detection)
 
