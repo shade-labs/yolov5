@@ -54,9 +54,10 @@ class ImageSubscriber(Node):
 
             hypothesises = []
             hypothesis = ObjectHypothesisWithPose()
+            hypothesis.id = row.id
+            hypothesis.score = row.confidence
             hypothesises.append(hypothesis)
             detection.results = hypothesises
-            detection.results[0].score = row.confidence
             detection.results[0].pose.pose.position.x = (int(row.xmin) + int(row.xmax)) / 2
             detection.results[0].pose.pose.position.y = (int(row.ymin) + int(row.ymax)) / 2
 
