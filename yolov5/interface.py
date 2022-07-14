@@ -6,7 +6,7 @@ import cv2
 from cv_bridge import CvBridge
 from std_msgs.msg import String
 from sensor_msgs.msg import Image
-from vision_msgs.msg import Detection2DArray, Detection2D, ObjectHypothesisWithPose
+from vision_msgs.msg import Detection2DArray, Detection2D, ObjectHypothesisWithPose, ObjectHypothesis
 
 class ImageSubscriber(Node):
     def __init__(self):
@@ -47,6 +47,10 @@ class ImageSubscriber(Node):
         self.counter += 1
 
         for row in df.itertuples():
+            self.get_logger().info(f"Detected {row.name}")
+            print(row)
+            print(row[5], row[6], row[7])
+
             detection = Detection2D()
 
             detection.header.stamp = self.get_clock().now().to_msg()
@@ -54,8 +58,8 @@ class ImageSubscriber(Node):
 
             hypothesises = []
             hypothesis = ObjectHypothesisWithPose()
-            hypothesis.id = row.id
-            hypothesis.score = row.confidence
+            hypothesis.hypothesis.class_id = str(row[6])
+            hypothesis.hypothesis.score(float(row[5]))
             hypothesises.append(hypothesis)
             detection.results = hypothesises
             detection.results[0].pose.pose.position.x = (int(row.xmin) + int(row.xmax)) / 2
