@@ -12,7 +12,6 @@
   <depend>cv_bridge</depend>
   <depend>sensor_msgs</depend>
   <depend>std_msgs</depend>
-  <depend>opencv2</depend>
   <depend>vision_msgs</depend>
   <depend>vision_opencv</depend>
 

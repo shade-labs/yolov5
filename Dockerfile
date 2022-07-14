@@ -4,27 +4,24 @@ FROM shaderobotics/pytorch:${ROS_DISTRO}
 ARG ROS_DISTRO=humble
 ENV ROS_DISTRO $ROS_DISTRO
 
+SHELL ["/bin/bash", "-c"]
 WORKDIR /home/shade/shade_ws
+COPY . ./src/yolov5
 
-# additional dependency requirements (cv2, cv_bridge, etc)
 RUN apt update && \
     apt install -y \
       ffmpeg \
       libsm6 \
       libxext6 \
-      python3 \
-      python3-pip \
-      ros-${ROS_DISTRO}-cv-bridge \
-      ros-${ROS_DISTRO}-vision-msgs \
-      ros-${ROS_DISTRO}-vision-opencv && \
-    rm -rf /var/lib/apt/lists/* && \
+      python3-pip && \
+    : "Install dependencies and build" && \
     python3 -m pip install --upgrade pip && \
-    python3 -m pip install -r https://raw.githubusercontent.com/ultralytics/yolov5/master/requirements.txt
-
-# inject and build wrapper
-COPY . ./src/yolov5
-
-RUN colcon build && \
+    python3 -m pip install ./src/yolov5 && \
+    rosdep install --from-paths src --ignore-src -r -y && \
+    source /opt/ros/${ROS_DISTRO}/setup.sh && \
+    rm -rf /var/lib/apt/lists/* && \
+    colcon build && \
+    : "Inject start script and shade cloud support" && \
     echo "#!/bin/bash" >> /home/shade/shade_ws/start.sh && \
     echo "source /opt/shade/setup.sh" >> /home/shade/shade_ws/start.sh && \
     echo "source /opt/ros/${ROS_DISTRO}/setup.sh" >> /home/shade/shade_ws/start.sh && \

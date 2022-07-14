@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1a236dc-4dad-4eee-87ce-cd2c9800ac5f" name="Changes" comment="fixed yolov5 formatting error">
+    <list default="true" id="34d0c7b8-033c-469e-8ca4-17887d20534b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/package.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
@@ -15,182 +13,31 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Dockerfile" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/cloudbuild.yaml" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2AwhXtsaAprhVrIOfERFOKzAuX0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
-  }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/demo" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Docker.Dockerfile">
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="yolov5" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
-          <option name="buildArgs">
-            <list>
-              <DockerEnvVarImpl>
-                <option name="name" value="ROS_DISTRO" />
-                <option name="value" value="humble" />
-              </DockerEnvVarImpl>
-            </list>
-          </option>
-          <option name="containerName" value="" />
           <option name="sourceFilePath" value="Dockerfile" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="demo/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="sourceFilePath" value="demo/Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Docker.demo/Dockerfile" />
-      <item itemvalue="Docker.Dockerfile" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Docker.demo/Dockerfile" />
         <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="a1a236dc-4dad-4eee-87ce-cd2c9800ac5f" name="Changes" comment="" />
-      <created>1655926599021</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1655926599021</updated>
-      <workItem from="1655926601178" duration="3272000" />
-      <workItem from="1656027130723" duration="1966000" />
-      <workItem from="1656604377775" duration="1932000" />
-      <workItem from="1656698641395" duration="6553000" />
-      <workItem from="1657223416010" duration="946000" />
-      <workItem from="1657224425457" duration="4624000" />
-      <workItem from="1657305557899" duration="8227000" />
-      <workItem from="1657314750141" duration="11734000" />
-      <workItem from="1657393879829" duration="21000" />
-      <workItem from="1657398208211" duration="13000" />
-      <workItem from="1657398827296" duration="669000" />
-      <workItem from="1657504552930" duration="48000" />
-      <workItem from="1657507439412" duration="60000" />
-    </task>
-    <task id="LOCAL-00001" summary="updated readme">
-      <created>1656707069728</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1656707069728</updated>
-    </task>
-    <task id="LOCAL-00002" summary="modified yolov5 to be shade registry compatable">
-      <created>1657233969922</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1657233969922</updated>
-    </task>
-    <task id="LOCAL-00003" summary="fixed small issue with current build">
-      <created>1657307371401</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1657307371401</updated>
-    </task>
-    <task id="LOCAL-00004" summary="fixed issue with yolov5 building">
-      <created>1657320441786</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1657320441787</updated>
-    </task>
-    <task id="LOCAL-00005" summary="integrated shade into yolov5">
-      <created>1657328814655</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1657328814655</updated>
-    </task>
-    <task id="LOCAL-00006" summary="fixed spacing issue">
-      <created>1657382690364</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1657382690364</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -202,14 +49,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated readme" />
-    <MESSAGE value="modified yolov5 to be shade registry compatable" />
-    <MESSAGE value="fixed small issue with current build" />
-    <MESSAGE value="fixed issue with yolov5 building" />
-    <MESSAGE value="integrated shade into yolov5" />
-    <MESSAGE value="fixed spacing issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed spacing issue" />
   </component>
 </project>
